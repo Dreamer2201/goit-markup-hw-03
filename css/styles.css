@@ -18,6 +18,10 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
 .header {
   border-bottom: 1px solid #ececec;
   font-weight: 500;
@@ -112,6 +116,8 @@ img {
 }
 /* Section Hero */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
   background-color: var(--dark-bg);
 }
@@ -170,10 +176,12 @@ img {
 }
 
 /* Section features */
+.features {
+  padding: 94px 0px 94px 0px;
+}
 .feature-list {
   display: flex;
   margin: 0;
-  padding: 94px 0px 94px 0px;
 }
 .feature-it {
   width: 270px;
@@ -198,13 +206,15 @@ img {
 }
 
 /* Section our-projects */
+.our-projects {
+  padding-bottom: 94px;
+}
 .our-projects .section-title {
   margin-bottom: 50px;
 }
 .projects-list {
   display: flex;
   margin: 0;
-  padding-bottom: 94px;
 }
 .projects-it:not(:nth-last-child(-n + 1)) {
   margin-right: 30px;
@@ -252,14 +262,14 @@ img {
 /* Footer */
 .footer {
   background-color: var(--dark-bg);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 address {
   font-style: inherit;
 }
 .footer-logo {
   display: inline-block;
-  margin-top: 60px;
-  margin-bottom: 20px;
   font-family: Raleway;
   font-style: 400;
   font-weight: bold;
@@ -273,10 +283,14 @@ address {
   color: var(--akcent-color-text);
 }
 .footer-address {
+  margin-top: 20px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-dark-text);
+}
+.footer-contacts {
+  margin-top: 9px;
 }
 .footer-mail,
 .footer-tel {
@@ -292,26 +306,22 @@ address {
   color: var(--akcent-color-text);
   cursor: pointer;
 }
-.footer-mail {
-  margin-top: 9px;
-  margin-bottom: 9px;
-}
-.footer-tel {
-  margin-bottom: 60px;
-}
 
 /* Portfolio page */
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .portfolio-list {
   display: flex;
   justify-content: center;
-  margin-top: 94px;
   margin-bottom: 50px;
 }
+
 .portfolio-btn > [type="button"] {
   padding: 6px 22px;
   border: 1px solid transparent;
   border-radius: 4px;
-  margin-right: 8px;
 
   font-family: inherit;
   font-weight: 500;
@@ -321,8 +331,11 @@ address {
   color: var(--primary-light-text);
   background-color: var(--primary-grey-bg);
 }
-.portfolio-btn > [type="button"]:not(:nth-last-child(1)) {
+.portfolio-btn {
   margin-right: 8px;
+}
+.portfolio-btn:nth-last-child(1) {
+  margin-right: 0px;
 }
 
 .portfolio [type="button"]:hover,
@@ -372,7 +385,9 @@ address {
 }
 .card-dscr {
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 .portfolio-subtitle {
   margin-bottom: 4px;
