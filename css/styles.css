@@ -19,8 +19,17 @@ body {
   letter-spacing: 0.03em;
 }
 .visually-hidden {
-  position: fixed;
-  transform: scale(0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .header {
   border-bottom: 1px solid #ececec;
@@ -267,6 +276,7 @@ img {
 }
 address {
   font-style: inherit;
+  margin-top: 20px;
 }
 .footer-logo {
   display: inline-block;
@@ -283,13 +293,13 @@ address {
   color: var(--akcent-color-text);
 }
 .footer-address {
-  margin-top: 20px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-dark-text);
 }
-.footer-contacts {
+.footer-list,
+.footer-contacts:last-child {
   margin-top: 9px;
 }
 .footer-mail,
